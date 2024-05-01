@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+body {
+    background: linear-gradient(to right, rgba(118, 107, 107, 0), rgba(196, 176, 176, 0.691));
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+.back {
+    padding: 32px 0;
+    background-color: rgba(90, 88, 88, 0.343);
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+/*.logo {
+    margin:0;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 25px 30px;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    color: coral;
+}*/
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+
+}
+.menu .navbar ul li  a {
+    font-size: 18px;
+    padding: 20px;
+    color:a black;
+    display: block;
+}
+.menu .navbar ul li  a:hover {
+    color:coral;
+    
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+    color: coral;
+
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .back {
+        padding: 45px 0;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(90, 88, 88, 0.343);
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+
+    }
+}
+
+
+/* card*/
+
+
+.content-cards{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    padding-top: 100px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+
+
+.card{
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.card:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/*.card i{
+    margin: 30px 0 20px 0;
+    color: #cc9199;
+    font-size: 50px;
+}*/
+
+.card p{
+    margin: 180px 0 0 0;
+    font-weight: 100px;
+    font-size: 25px;
+    margin-bottom: 90px;
+    color:coral;
+}
+
+card:first-child {
+    background-image: url(../img/guarderia2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.card:nth-child(2) {
+    background-image: url(../img/guarderia2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+}
+.card:nth-child(3) {
+    background-image: url(../img/adopciones.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
